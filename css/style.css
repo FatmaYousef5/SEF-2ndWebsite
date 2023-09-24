@@ -1,0 +1,317 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 3000px;
+    perspective: 600px;
+}
+
+#header-container {
+    position: relative;
+}
+
+#header-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+#header-content>img {
+    width: 130px;
+}
+
+
+#header-content a {
+    font-family: lobster;
+    margin-left: 70px;
+    color: rgb(192, 194, 208);
+    font-size: 22px;
+}
+
+#overlay {
+    width: 250px;
+    height: 120px;
+    border-style: ridge;
+    border-width: 1.8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    visibility: hidden;
+    margin-left: 650px;
+    color: rgb(192, 194, 208);
+    background-color: white;
+}
+
+#overlay p {
+    margin: auto;
+    color: rgb(227, 204, 201);
+}
+
+
+
+#more-overlay:hover #overlay {
+    visibility: visible;
+}
+
+#img {
+    width: 80%;
+    margin: auto;
+    margin-top: -60px;
+}
+
+#special-div {
+    position: relative;
+    height: 30vh;
+}
+
+#special-content {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#special-h {
+    font-size: 38px;
+    font-weight: 600;
+    color: rgb(206, 132, 161);
+}
+
+#special-h #sline {
+    background-color: rgb(140, 147, 190);
+    display: block;
+    width: 120px;
+    margin: auto;
+    margin-top: 15px;
+    height: 2.5px;
+    border-style: none;
+    transition: width .5s;
+}
+
+#special-h:hover #sline {
+    width: 165px;
+}
+
+
+#special-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    position: relative;
+    top: 500px;
+    width: 80%;
+    margin: auto;
+    height: 45vh;
+}
+
+#card-img {
+    width: 100%;
+}
+
+#arrow-img {
+    width: 28px;
+    display: none;
+}
+
+#card:hover #arrow-img {
+    display: block;
+}
+
+#discount {
+    position: relative;
+    top: 650px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+#discount-p {
+    background-color: rgba(140, 147, 190, 0.4);
+    color: rgb(231, 99, 152);
+    height: 200px;
+    margin-right: 150px;
+    flex: 3;
+    font-family: lobster;
+
+}
+
+#discount-p h2 {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#discount-p p {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+#discount-card {
+    flex: 1;
+    transition: 0.7s;
+}
+
+#discount-card h3 {
+    text-align: center;
+    color: rgb(206, 132, 161);
+    font-family: lobster;
+}
+
+#discount-card:hover {
+    transform: scale(1.3, 1.3);
+}
+
+#delivery-icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    position: relative;
+    top: 800px;
+    width: 80%;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#icon-grid {
+    border-right-style: ridge;
+    border-right-color: rgb(206, 132, 161);
+    border-width: 2px;
+    margin-right: 50px;
+}
+
+#icon-grid img {
+    width: 55px;
+    transition: all 0.5s;
+}
+
+#icon-grid:hover img {
+    transform: rotatey(360deg);
+}
+
+#icon-grid h4 {
+    font-family: lobster;
+}
+
+#most-div {
+    position: relative;
+    height: 30vh;
+}
+
+#most-content {
+    position: absolute;
+    top: 1000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#most-h {
+    font-size: 38px;
+    font-weight: 600;
+    color: rgb(140, 147, 190);
+}
+
+#most-h #mline {
+    background-color: rgb(206, 132, 161);
+    display: block;
+    width: 120px;
+    margin: auto;
+    margin-top: 15px;
+    height: 2.5px;
+    border-style: none;
+    transition: width .5s;
+}
+
+#most-h:hover #mline {
+    width: 165px;
+}
+
+#best-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 80%;
+    margin: auto;
+}
+
+#best-card,
+#front-div,
+#back-div {
+    width: 320px;
+    height: 320px;
+    transition: 1s;
+}
+
+#best-card {
+    position: relative;
+    top: 1000px;
+    margin-bottom: 50px;
+    transform-style: preserve-3d;
+}
+
+#front-div,
+#back-div {
+    position: absolute;
+}
+
+#front-div {
+    z-index: 1;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+#front-div p{
+    margin-top: 150px;
+    font-family: lobster;
+    color: white;
+    font-size: 32px;
+}
+
+#best-card:hover {
+    transform: rotateY(180deg);
+}
+
+#back-div {
+    transform: rotateY(180deg);
+}
+
+#back-div button{
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+    border-style: none;
+    font-family: lobster;
+    color: white;
+    font-size: 20px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ff9800;
+    background-color: unset;
+    border: none;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+.starRating {
+    user-select: none;
+    position: relative;
+    top: 970px;
+    margin-left: 5px;
+}
+
+.currentRating {
+    font-family: opensansb;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(Lobster-Regular.ttf);
+}
